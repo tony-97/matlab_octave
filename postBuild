@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Install Octave
+apt-get update && apt-get install -y octave
+
+# Install the Octave kernel for Jupyter
+pip install octave_kernel
+
+# Enable the Octave kernel
+python -m octave_kernel.install
