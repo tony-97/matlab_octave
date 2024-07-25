@@ -1,0 +1,456 @@
+function varargout = ADZAV1(varargin)
+% ADZAV1 MATLAB code for ADZAV1.fig
+%      ADZAV1, by itself, creates a new ADZAV1 or raises the existing
+%      singleton*.
+%
+%      H = ADZAV1 returns the handle to a new ADZAV1 or the handle to
+%      the existing singleton*.
+%
+%      ADZAV1('CALLBACK',hObject,eventData,handles,...) calls the local
+%      function named CALLBACK in ADZAV1.M with the given input arguments.
+%
+%      ADZAV1('Property','Value',...) creates a new ADZAV1 or raises the
+%      existing singleton*.  Starting from the left, property value pairs are
+%      applied to the GUI before ADZAV1_OpeningFcn gets called.  An
+%      unrecognized property name or invalid value makes property application
+%      stop.  All inputs are passed to ADZAV1_OpeningFcn via varargin.
+%
+%      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
+%      instance to run (singleton)".
+%
+% See also: GUIDE, GUIDATA, GUIHANDLES
+
+% Edit the above text to modify the response to help ADZAV1
+
+% Last Modified by GUIDE v2.5 16-Oct-2018 22:10:41
+
+% Begin initialization code - DO NOT EDIT
+gui_Singleton = 1;
+gui_State = struct('gui_Name',       mfilename, ...
+                   'gui_Singleton',  gui_Singleton, ...
+                   'gui_OpeningFcn', @ADZAV1_OpeningFcn, ...
+                   'gui_OutputFcn',  @ADZAV1_OutputFcn, ...
+                   'gui_LayoutFcn',  [] , ...
+                   'gui_Callback',   []);
+if nargin && ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+end
+
+if nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+else
+    gui_mainfcn(gui_State, varargin{:});
+end
+% End initialization code - DO NOT EDIT
+
+% --- Executes just before ADZAV1 is made visible.
+function ADZAV1_OpeningFcn(hObject, eventdata, handles, varargin)
+% This function has no output args, see OutputFcn.
+% hObject    handle to figure
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+% varargin   command line arguments to ADZAV1 (see VARARGIN)
+
+% Choose default command line output for ADZAV1
+handles.output = hObject;
+
+% Update handles structure
+guidata(hObject, handles);
+
+% UIWAIT makes ADZAV1 wait for user response (see UIRESUME)
+% uiwait(handles.figure1);
+
+% --- Outputs from this function are returned to the command line.
+function varargout = ADZAV1_OutputFcn(hObject, eventdata, handles) 
+% varargout  cell array for returning output args (see VARARGOUT);
+% hObject    handle to figure
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Get default command line output from handles structure
+varargout{1} = handles.output;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% --- Executes on selection change in popupmenu1.
+function popupmenu1_Callback(hObject, eventdata, handles)
+global p1
+p1=get(hObject,'Value')
+
+% --- Executes during object creation, after setting all properties.
+function popupmenu1_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+% --- Executes on selection change in popupmenu2.
+function popupmenu2_Callback(hObject, eventdata, handles)
+global p2
+p2=get(hObject,'Value')
+% --- Executes during object creation, after setting all properties.
+function popupmenu2_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+% --- Executes on selection change in popupmenu3.
+function popupmenu3_Callback(hObject, eventdata, handles)
+global p3
+p3=get(hObject,'Value')
+% --- Executes during object creation, after setting all properties.
+function popupmenu3_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+% --- Executes on selection change in popupmenu4.
+function popupmenu4_Callback(hObject, eventdata, handles)
+global p4
+p4=get(hObject,'Value')
+% --- Executes during object creation, after setting all properties.
+function popupmenu4_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+% --- Executes on selection change in popupmenu5.
+function popupmenu5_Callback(hObject, eventdata, handles)
+global p5
+p5=get(hObject,'Value')
+% --- Executes during object creation, after setting all properties.
+function popupmenu5_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+% --- Executes on selection change in popupmenu6.
+function popupmenu6_Callback(hObject, eventdata, handles)
+global p6
+p6=get(hObject,'Value')
+% --- Executes during object creation, after setting all properties.
+function popupmenu6_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit1_Callback(hObject, eventdata, handles)
+global va1
+va1 = str2double(get(hObject,'String'));
+% --- Executes during object creation, after setting all properties.
+function edit1_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit2_Callback(hObject, eventdata, handles)
+global va2
+va2 = str2double(get(hObject,'String'));
+% --- Executes during object creation, after setting all properties.
+function edit2_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit3_Callback(hObject, eventdata, handles)
+global va3;
+va3 = str2double(get(hObject,'String'));
+% --- Executes during object creation, after setting all properties.
+function edit3_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit4_Callback(hObject, eventdata, handles)
+global va4
+va4 = str2double(get(hObject,'String'));
+% --- Executes during object creation, after setting all properties.
+function edit4_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit5_Callback(hObject, eventdata, handles)
+global va5;va5 = str2double(get(hObject,'String'));
+% --- Executes during object creation, after setting all properties.
+function edit5_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit6_Callback(hObject, eventdata, handles)
+global va6;va6 = str2double(get(hObject,'String'));
+% --- Executes during object creation, after setting all properties.
+function edit6_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit7_Callback(hObject, eventdata, handles)
+global va7;va7 = str2double(get(hObject,'String'));
+% --- Executes during object creation, after setting all properties.
+function edit7_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit8_Callback(hObject, eventdata, handles)
+global va8;va8 = str2double(get(hObject,'String'));
+% --- Executes during object creation, after setting all properties.
+function edit8_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit9_Callback(hObject, eventdata, handles)
+global va9;va9 = str2double(get(hObject,'String'));
+% --- Executes during object creation, after setting all properties.
+function edit9_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit10_Callback(hObject, eventdata, handles)
+global va10;va10 = str2double(get(hObject,'String'));
+% --- Executes during object creation, after setting all properties.
+function edit10_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit11_Callback(hObject, eventdata, handles)
+global va11;va11 = str2double(get(hObject,'String'));
+% --- Executes during object creation, after setting all properties.
+function edit11_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit12_Callback(hObject, eventdata, handles)
+global va12;va12 = str2double(get(hObject,'String'));
+% --- Executes during object creation, after setting all properties.
+function edit12_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit13_Callback(hObject, eventdata, handles)
+global va13;va13 = str2double(get(hObject,'String'));
+% --- Executes during object creation, after setting all properties.
+function edit13_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit14_Callback(hObject, eventdata, handles)
+global va14;va14 = str2double(get(hObject,'String'));
+% --- Executes during object creation, after setting all properties.
+function edit14_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit15_Callback(hObject, eventdata, handles)
+global va15;va15 = str2double(get(hObject,'String'));
+% --- Executes during object creation, after setting all properties.
+function edit15_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit16_Callback(hObject, eventdata, handles)
+% --- Executes during object creation, after setting all properties.
+function edit16_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit17_Callback(hObject, eventdata, handles)
+% --- Executes during object creation, after setting all properties.
+function edit17_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit18_Callback(hObject, eventdata, handles)
+% --- Executes during object creation, after setting all properties.
+function edit18_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit19_Callback(hObject, eventdata, handles)
+% --- Executes during object creation, after setting all properties.
+function edit19_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit20_Callback(hObject, eventdata, handles)
+% --- Executes during object creation, after setting all properties.
+function edit20_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit31_Callback(hObject, eventdata, handles)
+global A; A = str2double(get(hObject,'String'));
+% --- Executes during object creation, after setting all properties.
+function edit31_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit32_Callback(hObject, eventdata, handles)
+global Ixx;Ixx = str2double(get(hObject,'String'));
+% --- Executes during object creation, after setting all properties.
+function edit32_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit33_Callback(hObject, eventdata, handles)
+global Iyy;Iyy = str2double(get(hObject,'String'));
+% --- Executes during object creation, after setting all properties.
+function edit33_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function edit34_Callback(hObject, eventdata, handles)
+global d;d = str2double(get(hObject,'String'));
+% --- Executes during object creation, after setting all properties.
+function edit40_CreateFcn(hObject, eventdata, handles)
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+% --- Executes on button press in pushbutton1.
+function pushbutton1_Callback(hObject, eventdata, handles)
+global p1 p2 p3 p4 p5 va1 va2 va3 va4 va5 va6 va7 va8 va9 va10 va11 va12 va13 va14 va15 
+global A Ixx Iyy
+
+% Example values for global variables
+p1 = 1; % Example index for first load
+p2 = 2; % Example index for second load
+p3 = 3; % Example index for third load
+p4 = 4; % Example index for fourth load
+p5 = 5; % Example index for fifth load
+
+va1 = 10; va2 = 15; va3 = 20; % Dead load values for first load
+va4 = 25; va5 = 30; va6 = 35; % Dead load values for second load
+va7 = 40; va8 = 45; va9 = 50; % Dead load values for third load
+va10 = 55; va11 = 60; va12 = 65; % Dead load values for fourth load
+va13 = 70; va14 = 75; va15 = 80; % Dead load values for fifth load
+
+A = 100; % Example area (m^2)
+Ixx = 2000; % Example moment of inertia about x-axis (m^4)
+Iyy = 3000; % Example moment of inertia about y-axis (m^4)
+
+Mload       = zeros(3,6);
+Mload(:,p1) = [va1 va2 va3]';
+Mload(:,p2) = [va4 va5 va6]';
+Mload(:,p3) = [va7 va8 va9]';
+Mload(:,p4) = [va10 va11 va12]';
+Mload(:,p5) = [va13 va14 va15]';
+Mload       = Mload(:,2:6);
+%cargas muertas
+Pm  =  Mload(1,1);
+MXm =  Mload(2,1);
+MYm =  Mload(3,1);
+%cargas vivas
+Pv  =  Mload(1,2);
+MXv =  Mload(2,2);
+MYv =  Mload(3,2);
+%CARGAS sismicas
+PS  =  Mload(1,3);
+MXS =  Mload(2,3);
+MYS =  Mload(3,3);
+%
+P = Pm + Pv; MX = MXm + MXv; MY = MYm + MYv; 
+%Combinacion de cargas
+  
+  Co = [Pm+Pv               , MXm+MXv                   , MYm+MYv                   ,P   , MX    , MY    ;
+        Pm+0.7*PS           , MXm+0.7*MXS               , MYm                       ,P+PS, MX+MXS, MY    ;
+        Pm+0.7*PS           , MXm-0.7*MXS               , MYm                       ,P+PS, MX-MXS, MY    ;
+        Pm+0.7*PS           , MXm                       , MYm+0.7*MYS               ,P+PS, MX    , MY+MYS;
+        Pm+0.7*PS           , MXm                       , MYm-0.7*MYS               ,P+PS, MX    , MY-MYS;
+        Pm+0.75*Pv+.7*.75*PS, MXm+0.75*MXv+0.7*0.75*MXS , MYm+0.75*MYv              ,0   , 0     , 0     ;
+        Pm+0.75*Pv+.7*.75*PS, MXm+0.75*MXv-0.7*0.75*MXS , MYm+0.75*MYv              ,0   , 0     , 0     ;
+        Pm+0.75*Pv+.7*.75*PS, MXm+0.75*MXv              , MYm+0.75*MYv+0.7*0.75*MYS ,0   , 0     , 0     ;
+        Pm+0.75*Pv+.7*.75*PS, MXm+0.75*MXv              , MYm+0.75*MYv-0.7*0.75*MYS ,0   , 0     , 0     ;
+        0.6*Pm+.7*PS        , 0.6* MXm                  , 0.6*MYm+0.7*MYS           ,0   , 0     , 0     ;
+        0.6*Pm+.7*PS        , 0.6* MXm                  , 0.6*MYm-0.7*MYS           ,0   , 0     , 0     ]
+
+%VERTICES DEL POLIGONO
+xv = [-1.285	1.215	1.215	-1.285	-1.285
+];%%%puntos del poligono
+yv = [-4.49	-4.49	4.49	4.49	-4.49
+];%puntos del poligono
+limit = max(max(abs(xv)),max(abs(yv)))
+%IDENTIFICAR LOS PUNTOS QUE CAEN DENTRO DEL POLIGONO PARA ESO se coloca el
+%minimo valor de un vertice y el maximo valor de un vertice y se genera un
+%rango cuadrado
+x = [-limit:.01:limit]';%tiene que ser del mismo rango
+y = x;
+
+[X,Y] = meshgrid(x,y);%CREAR INTERPOLACIONES
+xq = X' ;
+yq = Y';
+in = inpolygon(xq,yq,xv,yv);
+XL= xq(in);
+YL= yq(in);
+ZL= zeros(length(XL),5) ;
+figure('Name','ADFUN V4.0','NumberTitle','off')
+for i =1:6
+    P = Co(i,1);
+    M2= Co(i,2);
+    M3= Co(i,3);
+    k = P/A + M2*XL./Iyy + M3*YL./Ixx;
+%equacion de flexion 
+    ZL(:,i)  = k;
+    vmin =min(k);
+    vmax =max(k);
+    pin  = i;
+%PLOT
+subplot(2,3,i)
+plot(xv,yv,'k-','LineWidth',1) % polygon
+hold on
+% plot(xq(in),yq(in),'r+') % points inside
+% hold off
+% PLOT
+% figure
+scatter3(XL,YL,ZL(:,i),[],ZL(:,i),'.')
+c = colorbar;
+c.Label.String = 'Presion Admisible (Tn/m)';
+view(0,90)
+%title(vmin)
+title({['Comb ' num2str(pin)];['\sigma_m_i_n = ' num2str(vmin),'Tn/m'];['\sigma_m_a_x = ' num2str(vmax),'Tn/m']})
+end
+
+figure('Name','ADFUN V4.0','NumberTitle','off')
+for i =7:11
+    P = Co(i,1);
+    M2= Co(i,2);
+    M3= Co(i,3);
+    k = P/A + M2*XL./Iyy + M3*YL./Ixx;
+%equacion de flexion 
+    ZL(:,i)  = k;
+    vmin =min(k);
+    vmax =max(k);
+    pin  = i;
+%PLOT
+subplot(2,3,i-6)
+plot(xv,yv,'k-','LineWidth',1) % polygon
+hold on
+% plot(xq(in),yq(in),'r+') % points inside
+% hold off
+% PLOT
+% figure
+scatter3(XL,YL,ZL(:,i),[],ZL(:,i),'.')
+c = colorbar;
+c.Label.String = 'Presion Admisible (Tn/m)';
+view(0,90)
+%title(vmin)
+title({['Comb ' num2str(pin)];['\sigma_m_i_n = ' num2str(vmin),'Tn/m'];['\sigma_m_a_x = ' num2str(vmax),'Tn/m']})
+end
